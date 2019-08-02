@@ -47,5 +47,11 @@ namespace WpfApp1
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window myWin = new SecondWindow();
+            myWin.Show();
+        }
     }
 }
