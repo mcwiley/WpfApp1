@@ -41,17 +41,16 @@ namespace WpfApp1
             myCombo.ItemsSource = General.GetData("select * from SubTopics").DefaultView;
             myCombo.DisplayMemberPath = "SubTopicName";
             myCombo.SelectedValuePath = "SubTopicID";
-        }
 
-        private void MyCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+            lb_MyData.ItemsSource = General.GetData("select * from SubTopics").DefaultView;
+            lb_MyData.DisplayMemberPath = "SubTopicName";
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window myWin = new SecondWindow();
-            myWin.Show();
+            myWin.ShowDialog();
         }
     }
 }

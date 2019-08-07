@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:Syncfusion="http://schemas.syncfusion.com/wpf" x:Class="WpfApp1.MainWindow"
         mc:Ignorable="d"
-        Title="WpfApp1" Height="768" Width="1024" WindowStartupLocation="CenterScreen">
+        Title="WpfApp1" Height="768" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderThickness="0">
     <Grid>
         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="This is the first button" Margin="10,10,0,0" Click="Button_Click" />
         <Button x:Name="Clicker" HorizontalAlignment="Left" VerticalAlignment="Center" Content="A is the second button button" Click="Clicker_Click" Margin="10,0,0,0"/>
@@ -25,12 +25,14 @@
         </Button>
         <TabControl HorizontalAlignment="Left" Height="237" Margin="255,329,0,0" VerticalAlignment="Top" Width="604">
             <TabItem Header="TabItem">
-                <ComboBox x:Name="myCombo" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="286" SelectionChanged="MyCombo_SelectionChanged"/>
+                <ComboBox x:Name="myCombo" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="286"/>
             </TabItem>
             <TabItem Header="TabItem">
                 <DataGrid x:Name="dg_Topics" HorizontalAlignment="Left" Height="154" Margin="10,10,10,0" VerticalAlignment="Top" Width="286" Grid.Column="2" ColumnWidth="139" Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue"/>
             </TabItem>
-            <TabItem Header="Another TabItem"/>
+            <TabItem Header="Another TabItem">
+                <ListBox x:Name="lb_MyData" Margin="56,48,413,48"/>
+            </TabItem>
         </TabControl>
 
 
