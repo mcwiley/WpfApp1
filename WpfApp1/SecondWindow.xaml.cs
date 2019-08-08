@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : WpfApp1
+// Author           : m_c_w
+// Created          : 08-02-2019
+//
+// Last Modified By : m_c_w
+// Last Modified On : 08-07-2019
+// ***********************************************************************
+// <copyright file="SecondWindow.xaml.cs" company="">
+//     Copyright ©  2019
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,12 +29,29 @@ namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for SecondWindow.xaml
+    /// Implements the <see cref="System.Windows.Window" />
+    /// Implements the <see cref="System.Windows.Markup.IComponentConnector" />
     /// </summary>
+    /// <seealso cref="System.Windows.Window" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class SecondWindow : Window
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SecondWindow"/> class.
+        /// </summary>
         public SecondWindow()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Handles the Click event of the Button control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

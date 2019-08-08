@@ -6,8 +6,46 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="SecondWindow" Height="768" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="RoundButtonTemplate" TargetType="Button">
+            <Setter Property="Background" Value="Brown"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}"
+                                BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Label Content="This is a Label" HorizontalAlignment="Left" Margin="71,49,0,0" VerticalAlignment="Top"/>
 
+        <Button Content="Rounded Button"
+                Style="{StaticResource RoundButtonTemplate}"
+                HorizontalAlignment="Left" 
+                Margin="778,20,0,0" 
+                VerticalAlignment="Top" 
+                Width="207" 
+                Height="47"
+                BorderBrush="#FFF" Click="Button_Click"
+                Name="Button" Background="#FF2287C1" Foreground="White"/>
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Height="79" Margin="204,189,0,0" VerticalAlignment="Top" Width="588">
+            <StackPanel HorizontalAlignment="Left" Height="48" Margin="19,10,0,0" VerticalAlignment="Top" Width="529">
+                <RadioButton Content="RadioButton"/>
+                <RadioButton Content="RadioButton"/>
+                <RadioButton Content="RadioButton"/>
+            </StackPanel>
+        </GroupBox>
+
     </Grid>
+
 </Window>
