@@ -4,7 +4,7 @@
 // Created          : 08-02-2019
 //
 // Last Modified By : m_c_w
-// Last Modified On : 08-07-2019
+// Last Modified On : 08-08-2019
 // ***********************************************************************
 // <copyright file="SecondWindow.xaml.cs" company="">
 //     Copyright ©  2019
@@ -37,7 +37,7 @@ namespace WpfApp1
     public partial class SecondWindow : Window
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecondWindow"/> class.
+        /// Initializes a new instance of the <see cref="SecondWindow" /> class.
         /// </summary>
         public SecondWindow()
         {
@@ -48,7 +48,7 @@ namespace WpfApp1
         /// Handles the Click event of the Button control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

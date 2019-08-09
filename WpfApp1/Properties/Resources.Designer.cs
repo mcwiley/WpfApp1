@@ -4,7 +4,7 @@
 // Created          : 07-30-2019
 //
 // Last Modified By : m_c_w
-// Last Modified On : 07-30-2019
+// Last Modified On : 08-08-2019
 // ***********************************************************************
 // <copyright file="Resources.Designer.cs" company="">
 //     Copyright ©  2019
@@ -40,7 +40,7 @@ namespace WpfApp1.Properties
         private static global::System.Globalization.CultureInfo resourceCulture;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Resources"/> class.
+        /// Initializes a new instance of the <see cref="Resources" /> class.
         /// </summary>
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources()

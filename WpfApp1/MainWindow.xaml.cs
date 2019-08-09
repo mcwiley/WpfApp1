@@ -4,7 +4,7 @@
 // Created          : 07-30-2019
 //
 // Last Modified By : m_c_w
-// Last Modified On : 08-07-2019
+// Last Modified On : 08-08-2019
 // ***********************************************************************
 // <copyright file="MainWindow.xaml.cs" company="">
 //     Copyright ©  2019
@@ -41,7 +41,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// Initializes a new instance of the <see cref="MainWindow" /> class.
         /// </summary>
         public MainWindow()
         {
@@ -53,7 +53,7 @@ namespace WpfApp1
         /// Handles the Click event of the Clicker control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void Clicker_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("This is the Clicker");
@@ -79,7 +79,7 @@ namespace WpfApp1
         /// Handles the Click event of the Button control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window myWin = new SecondWindow();
