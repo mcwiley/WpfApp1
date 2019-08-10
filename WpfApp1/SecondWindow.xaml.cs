@@ -42,6 +42,7 @@ namespace WpfApp1
         public SecondWindow()
         {
             InitializeComponent();
+            FillListview();
         }
 
         /// <summary>
@@ -53,5 +54,17 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+        private void FillListview()
+        {
+            //lv_Contacts.ItemsSource = null;
+            //lv_Contacts.ItemsSource = General.GetDataTEST("select * from Topics").DefaultView;
+            lv_Contacts.ItemsSource = General.GetDataTEST("select * from SubTopics").DefaultView;
+            //lv_Contacts.DisplayMemberPath = "SubTopicName";
+            //lv_Contacts.SelectedValuePath = "SubTopicID";
+
+        }
+
+
     }
 }

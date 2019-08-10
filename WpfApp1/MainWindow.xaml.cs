@@ -64,13 +64,13 @@ namespace WpfApp1
         /// </summary>
         public void FillDataGrid()
         {
-            dg_Topics.ItemsSource = General.GetData("select * from Topics").DefaultView;
+            dg_Topics.ItemsSource = General.GetDataTEST("select * from Topics").DefaultView;
 
-            myCombo.ItemsSource = General.GetData("select * from SubTopics").DefaultView;
+            myCombo.ItemsSource = General.GetDataTEST("select * from SubTopics").DefaultView;
             myCombo.DisplayMemberPath = "SubTopicName";
             myCombo.SelectedValuePath = "SubTopicID";
 
-            lb_MyData.ItemsSource = General.GetData("select * from SubTopics").DefaultView;
+            lb_MyData.ItemsSource = General.GetDataTEST("select * from SubTopics").DefaultView;
             lb_MyData.DisplayMemberPath = "SubTopicName";
 
         }

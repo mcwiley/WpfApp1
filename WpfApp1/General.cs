@@ -29,7 +29,8 @@ namespace WpfApp1
         /// <summary>
         /// My database connection
         /// </summary>
-        public static string myDBConn = "Server=DESKTOP-SNIFN8M;Database=TestDB;Trusted_Connection=True;";
+        public static string myDBTEST = "Server=DESKTOP-SNIFN8M;Database=TestDB;Trusted_Connection=True;";
+        public static string DBNorth = "Server=DESKTOP-SNIFN8M;Database=Northwind;Trusted_Connection=True;";
 
         /// <summary>
         /// Lefts the specified parameter.
@@ -86,11 +87,11 @@ namespace WpfApp1
         /// </summary>
         /// <param name="getSQL">The get SQL.</param>
         /// <returns>DataTable.</returns>
-        public static DataTable GetData(string getSQL)
+        public static DataTable GetDataTEST(string getSQL)
         {
             DataTable dt = new DataTable();
 
-            SqlConnection connection = new SqlConnection(General.myDBConn);
+            SqlConnection connection = new SqlConnection(General.myDBTEST);
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
             command = new SqlCommand(getSQL, connection);
