@@ -59,7 +59,7 @@ namespace WpfApp1
         {
             //lv_Contacts.ItemsSource = null;
             //lv_Contacts.ItemsSource = General.GetDataTEST("select * from Topics").DefaultView;
-            lv_Contacts.ItemsSource = General.GetDataTEST("select * from SubTopics").DefaultView;
+            lv_Contacts.ItemsSource = General.GetDataTEST("select T.*, S.* from Topics T join SubTopics S on T.TopicID = S.TopicID").DefaultView;
             //lv_Contacts.DisplayMemberPath = "SubTopicName";
             //lv_Contacts.SelectedValuePath = "SubTopicID";
 

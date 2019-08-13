@@ -18,6 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace WpfApp1
 {
@@ -26,12 +27,6 @@ namespace WpfApp1
     /// </summary>
     public static class General
     {
-        /// <summary>
-        /// My database connection
-        /// </summary>
-        public static string myDBTEST = "Server=DESKTOP-SNIFN8M;Database=TestDB;Trusted_Connection=True;";
-        public static string DBNorth = "Server=DESKTOP-SNIFN8M;Database=Northwind;Trusted_Connection=True;";
-
         /// <summary>
         /// Lefts the specified parameter.
         /// </summary>
@@ -91,7 +86,8 @@ namespace WpfApp1
         {
             DataTable dt = new DataTable();
 
-            SqlConnection connection = new SqlConnection(General.myDBTEST);
+            string CS = ConfigurationManager.ConnectionStrings["myDBTEST"].ConnectionString; ;
+            SqlConnection connection = new SqlConnection(CS);
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
             command = new SqlCommand(getSQL, connection);

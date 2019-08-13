@@ -31,11 +31,13 @@
         <DatePicker HorizontalAlignment="Left" Margin="470,75,0,0" VerticalAlignment="Top" Width="233" SelectedDateFormat="Long"/>
 
 
-        <ListView x:Name="lv_Contacts" Margin="256,250,262,139" Height="250" Width="400" >
+        <ListView x:Name="lv_Contacts" Margin="230,300,162,246" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=SubTopicName}"               Header="Name" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=SubTopicID}"               Header="Standort" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TopicName}"    Header="Topic Name" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TopicID}"      Header="Topic ID" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=SubTopicName}" Header="SubTopic Name" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=SubTopicID}"   Header="SubTopic ID" Width="150"/>
                 </GridView>
             </ListView.View>
         </ListView>
