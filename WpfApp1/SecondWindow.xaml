@@ -46,6 +46,7 @@
 
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="115,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.859,-0.333"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="115,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.099,0.4"/>
+        <WebBrowser x:Name="myBrowser" HorizontalAlignment="Left" Height="197" Margin="230,509,0,0" VerticalAlignment="Top" Width="391" Source="{x:Null}"/>
 
     </Grid>
 
