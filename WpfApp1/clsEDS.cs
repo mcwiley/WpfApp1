@@ -16,12 +16,12 @@ using System.Text;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace EncryptDecryptSample
+namespace WpfApp1
 {
     /// <summary>
     /// Class clsEDS.
     /// </summary>
-    public class clsEDS
+    public static class clsEDS
     {
         // This size of the IV (in bytes) must = (keysize / 8).  Default keysize is 256, so the IV must be
         // 32 bytes long.  Using a 16 character string here gives us 32 bytes when converted to a byte array.

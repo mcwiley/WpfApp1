@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="WpfApp1" Height="768" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderThickness="0">
     <Grid>
-        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="This is the first button" Margin="10,10,0,0" Click="Button_Click" />
-        <Button x:Name="Clicker" HorizontalAlignment="Left" VerticalAlignment="Center" Content="A is the second button button" Click="Clicker_Click" Margin="10,0,0,0"/>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Goto Second Window" Margin="24,10,0,0" Click="Button_Click" Width="149" />
+        <Button x:Name="Clicker" HorizontalAlignment="Left" VerticalAlignment="Center" Content="A is the second button" Click="Clicker_Click" Margin="24,360,0,340" Width="149" Height="39"/>
         <Button  HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold" Content="This is the third button" Margin="10,0,0,10" />
 
 
@@ -34,6 +34,7 @@
                 <ListBox x:Name="lb_MyData" Margin="56,48,413,48"/>
             </TabItem>
         </TabControl>
+        <Button x:Name="btnThird" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Goto Third Window" Margin="850,10,0,0" Width="149" Click="BtnThird_Click" />
 
 
 

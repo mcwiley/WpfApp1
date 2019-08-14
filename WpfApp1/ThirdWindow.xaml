@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="ThirdWindow" Height="450" Width="800">
+        Title="ThirdWindow" Height="768" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Label x:Name="lbl_Header" Content="256 bit Encryption / Decryption Sample" HorizontalAlignment="Left" Margin="41,42,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman"/>
+
+        <Label x:Name="lbl_PassPhrase" Content="Pass Phrase:" HorizontalAlignment="Left" Margin="41,129,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label x:Name="lbl_StrToEncrypt" Content="String to Encrypt:" HorizontalAlignment="Left" Margin="41,198,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.832,0.406" Width="102"/>
+        <Label x:Name="lbl_Encrypted_String_" Content="Encrypted String:" HorizontalAlignment="Left" Margin="41,264,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label x:Name="lbl_Decrypted_String" Content="Decrypted String:" HorizontalAlignment="Left" Margin="41,338,0,0" VerticalAlignment="Top"/>
+        
+        <TextBox x:Name="txt_Pass" HorizontalAlignment="Left" Height="23" Margin="197,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="745" 
+                 KeyboardNavigation.TabIndex="0"/>
+        <TextBox x:Name="txt_Enc" HorizontalAlignment="Left" Height="23" Margin="197,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="745" 
+                 KeyboardNavigation.TabIndex="1"/>
+        <TextBox x:Name="txt_Result" HorizontalAlignment="Left" Height="23" Margin="197,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="745" 
+                 KeyboardNavigation.TabIndex="3"/>
+        <TextBox x:Name="txt_Dec" HorizontalAlignment="Left" Height="23" Margin="197,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="745" 
+                 KeyboardNavigation.TabIndex="5"/>
+        
+        <Button x:Name="btn_Encrypt" Content="Encrypt It" HorizontalAlignment="Left" Margin="867,230,0,0" VerticalAlignment="Top" Width="75" 
+                KeyboardNavigation.TabIndex="2" Click="Btn_Encrypt_Click"/>
+        <Button x:Name="btn_Decrypt" Content="Decrypt It" HorizontalAlignment="Left" Margin="867,296,0,0" VerticalAlignment="Top" Width="75" 
+                KeyboardNavigation.TabIndex="4" Click="Btn_Decrypt_Click"/>
+        <Button x:Name="btn_Clear" Content="Clear Form" HorizontalAlignment="Left" Margin="867,418,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Clear_Click"/>
         
     </Grid>
 </Window>

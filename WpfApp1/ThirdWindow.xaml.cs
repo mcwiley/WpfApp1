@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
+using System.IO;
 
 namespace WpfApp1
 {
@@ -19,9 +21,42 @@ namespace WpfApp1
     /// </summary>
     public partial class ThirdWindow : Window
     {
+        
         public ThirdWindow()
         {
             InitializeComponent();
+            txt_Pass.Focus();
+        }
+
+        private void Btn_Encrypt_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_Enc.Text))
+            {
+                if (!string.IsNullOrEmpty(txt_Enc.Text))
+                {
+                    txt_Result.Text = clsEDS.EncryptString(txt_Enc.Text, txt_Pass.Text);
+                }
+            }
+        }
+
+        private void Btn_Decrypt_Click(object sender, RoutedEventArgs e)
+        {
+            string sStrDecrypted = clsEDS.DecryptString(txt_Result.Text, txt_Pass.Text);
+            txt_Dec.Text = clsEDS.DecryptString(txt_Result.Text, txt_Pass.Text);
+
+            txt_Dec.Foreground = Brushes.Red;
+            if (txt_Enc.Text == txt_Dec.Text)
+            {
+                txt_Dec.Foreground = Brushes.LimeGreen;
+            }
+        }
+
+        private void Btn_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            txt_Pass.Text = "";
+            txt_Enc.Text = "";
+            txt_Result.Text = "";
+            txt_Dec.Text = "";
         }
     }
 }

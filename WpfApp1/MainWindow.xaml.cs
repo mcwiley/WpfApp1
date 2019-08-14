@@ -85,5 +85,11 @@ namespace WpfApp1
             Window myWin = new SecondWindow();
             myWin.ShowDialog();
         }
+
+        private void BtnThird_Click(object sender, RoutedEventArgs e)
+        {
+            Window myWin3 = new ThirdWindow();
+            myWin3.ShowDialog();
+        }
     }
 }
