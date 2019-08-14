@@ -91,5 +91,9 @@ namespace WpfApp1
             }
         }
 
+        private void MySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            usernameText.Height = mySlider.Value + 82;
+        }
     }
 }

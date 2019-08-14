@@ -18,8 +18,9 @@
                 VerticalAlignment="Top" 
                 Width="138" 
                 Height="35"
-                BorderBrush="#FFF" Click="Button_Click"
-                x:Name="Button" Background="#FF2287C1" Foreground="White"/>
+                BorderBrush="Black" Click="Button_Click"
+                x:Name="Button" Foreground="Black" Background="#FF00F3FF"/>
+
         <GroupBox Header="GroupBox" HorizontalAlignment="Left" Height="75" Margin="115,61,0,0" VerticalAlignment="Top" Width="136" BorderBrush="#FF064D78">
             <StackPanel HorizontalAlignment="Left" Height="48" Margin="19,4,0,0" VerticalAlignment="Top" Width="95">
                 <RadioButton Content="RadioButton"/>
@@ -27,7 +28,9 @@
                 <RadioButton Content="RadioButton"/>
             </StackPanel>
         </GroupBox>
+
         <Calendar HorizontalAlignment="Left" Margin="256,68,0,0" VerticalAlignment="Top"/>
+
         <DatePicker HorizontalAlignment="Left" Margin="470,75,0,0" VerticalAlignment="Top" Width="233" SelectedDateFormat="Long"/>
 
 
@@ -42,11 +45,19 @@
             </ListView.View>
         </ListView>
 
-
+        <TextBox x:Name="usernameText"  TextWrapping="Wrap" Text="" HorizontalContentAlignment="Left" Margin="470,197,208,460">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
 
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="115,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.859,-0.333"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="115,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.099,0.4"/>
         <WebBrowser x:Name="myBrowser" HorizontalAlignment="Left" Height="197" Margin="230,509,0,0" VerticalAlignment="Top" Width="391" Source="{x:Null}"/>
+        
+        <Slider x:Name="mySlider" HorizontalAlignment="Left" Margin="856,206,0,0" VerticalAlignment="Top" Width="78" ValueChanged="MySlider_ValueChanged"/>
 
     </Grid>
 
