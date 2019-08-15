@@ -46,6 +46,13 @@ namespace WpfApp1
             FillListview();
         }
 
+
+
+
+
+
+
+
         /// <summary>
         /// Handles the Click event of the Button control.
         /// </summary>
@@ -66,34 +73,18 @@ namespace WpfApp1
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            myBrowser.Navigate(new Uri("http://www.comcast.net"));
         }
         private void GoBack_Click(object sender, RoutedEventArgs e)
         {
-            if (myBrowser.CanGoBack)
-            {
-                myBrowser.GoBack();
-            }
-            else
-            {
-                MessageBox.Show("Cannot Go back");
-            }
         }
         private void GoForward_Click(object sender, RoutedEventArgs e)
         {
-            if (myBrowser.CanGoForward)
-            {
-                myBrowser.GoForward();
-            }
-            else
-            {
-                MessageBox.Show("Cannot Go Forward");
-            }
         }
 
         private void MySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            usernameText.Height = mySlider.Value + 82;
+            usernameText.Height = mySlider.Value;
+            usernameText.Text = mySlider.Value.ToString();
         }
     }
 }
