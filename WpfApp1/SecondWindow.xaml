@@ -34,7 +34,7 @@
         <DatePicker HorizontalAlignment="Left" Margin="470,75,0,0" VerticalAlignment="Top" Width="233" SelectedDateFormat="Long"/>
 
 
-        <ListView x:Name="lv_Contacts" Margin="230,300,162,371" >
+        <ListView x:Name="lv_Contacts" Margin="230,300,162,214" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=TopicName}"    Header="Topic Name" Width="150"/>

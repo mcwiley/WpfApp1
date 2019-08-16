@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Security.Cryptography;
 using System.IO;
+using System.Threading;
 
 namespace WpfApp1
 {
@@ -58,5 +59,17 @@ namespace WpfApp1
             txt_Result.Text = "";
             txt_Dec.Text = "";
         }
+
+        private void BtnProBar_Click(object sender, RoutedEventArgs e)
+        {
+            probar.Value = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                probar.Value++;
+                Thread.Sleep(50);
+            }
+        }
+
+
     }
 }
